@@ -1,1 +1,48 @@
-
+{
+  "id": "did:web:nice-flower-0564b5d10.3.azurestaticapps.net",
+  "@context": [
+    "https://www.w3.org/ns/did/v1",
+    {
+      "@base": "did:web:nice-flower-0564b5d10.3.azurestaticapps.net"
+    }
+  ],
+  "service": [
+    {
+      "id": "#linkeddomains",
+      "type": "LinkedDomains",
+      "serviceEndpoint": {
+        "origins": [
+          "https://nice-flower-0564b5d10.3.azurestaticapps.net/"
+        ]
+      }
+    },
+    {
+      "id": "#hub",
+      "type": "IdentityHub",
+      "serviceEndpoint": {
+        "instances": [
+          "https://hub.did.msidentity.com/v1.0/4dc942a7-7397-4623-89fd-1beda2208c9a"
+        ]
+      }
+    }
+  ],
+  "verificationMethod": [
+    {
+      "id": "#67ef311b9c24470fa4a29cd7cddcc4d5vcSigningKey-05587",
+      "controller": "did:web:nice-flower-0564b5d10.3.azurestaticapps.net",
+      "type": "EcdsaSecp256k1VerificationKey2019",
+      "publicKeyJwk": {
+        "crv": "secp256k1",
+        "kty": "EC",
+        "x": "gzDM1fTMtvbPi6SgEimBNVl_MUFSHR5KlDMoI5e0gYw",
+        "y": "cfb2WkjJstWdSKqBxNVLCn6sXYa5proNsxHevQJH2w4"
+      }
+    }
+  ],
+  "authentication": [
+    "#67ef311b9c24470fa4a29cd7cddcc4d5vcSigningKey-05587"
+  ],
+  "assertionMethod": [
+    "#67ef311b9c24470fa4a29cd7cddcc4d5vcSigningKey-05587"
+  ]
+}
